@@ -1,14 +1,27 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { COLORS } from '../../styles/colors';
 
-const StyledLink = styled(NavLink)`
-	display: block;
-	font-size: 18px;
-	padding-inline: 20px;
-	margin-bottom: 8px;
+const StyledMenu = styled.ul`
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	text-align: center;
+	padding: 2rem;
+
+	@media screen and (width >768px) {
+		flex-direction: row;
+	}
 `;
 
-// Link para navegación sin saber el menu activo
-// NavLink para navegación sabiendo el menu activo
+const StyledLink = styled(NavLink)`
+	color: ${COLORS.secondary};
+	font-size: 1.5rem;
 
-export { StyledLink };
+	&.active {
+		color: ${COLORS.primary};
+	}
+`;
+
+export { StyledLink, StyledMenu };

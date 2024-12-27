@@ -1,21 +1,25 @@
-import { StyledLink } from './menu.styles';
+import { StyledLink, StyledMenu } from './menu.styles';
 
-const Menu = () => {
+const Menu = ({ open, setOpen }) => {
 	return (
 		<nav>
-			<ul>
+			<StyledMenu $open={open}>
 				<li>
-					<StyledLink to='/'>HOME</StyledLink>
+					<StyledLink to='/' onClick={() => setOpen(false)}>
+						Home
+					</StyledLink>
 				</li>
 				<li>
-					<StyledLink to='/about'>ABOUT</StyledLink>
+					<StyledLink to='/game-store' onClick={() => setOpen(false)}>
+						Game Store
+					</StyledLink>
 				</li>
 				<li>
-					<StyledLink to='/macarena'>USER - Macarena</StyledLink>
-					<StyledLink to='/xavi'>USER - Xavi</StyledLink>
-					<StyledLink to='/diego'>USER - Diego</StyledLink>
+					<StyledLink to='/checkout' onClick={() => setOpen(false)}>
+						Checkout
+					</StyledLink>
 				</li>
-			</ul>
+			</StyledMenu>
 		</nav>
 	);
 };

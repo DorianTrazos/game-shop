@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import { COLORS } from './colors';
 import './normalize.css';
 export const GlobalStyles = createGlobalStyle`
+ 
+
     *,
     *::after,
     *::before {
@@ -25,10 +28,12 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        font-family: sans-serif;
+        user-select: none;
+        font-family: "Inter", serif;
         color: aliceblue;
-        margin: 0;
-        background-color: #333;
+        max-width: 1440px;
+        margin: 0 auto;
+        background-color: ${COLORS.dark};
     }
 
 `;
