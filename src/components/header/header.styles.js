@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height: ${({ $open }) => ($open ? '19.375rem' : '130px')};
+	height: ${({ $open }) => ($open ? '19.375rem' : '7.5rem')};
 	margin-bottom: 2rem;
 	padding: 2rem;
 	border-radius: 1rem;

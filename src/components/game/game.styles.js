@@ -16,7 +16,6 @@ const StyledGameContainer = styled.div`
 
 const StyledGameTitle = styled.h2`
 	margin-block: 0;
-	/* margin-right: auto; */
 	font-size: 1.125rem;
 	font-weight: 600;
 `;

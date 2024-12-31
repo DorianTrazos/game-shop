@@ -1,10 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import Checkout from '../pages/checkout/Checkout';
 import GameStore from '../pages/game-store/GameStore';
 import Home from '../pages/home/Home';
 
 const Router = () => {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
 	return (
 		<Routes>
 			<Route path='/' element={<Layout />}>

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/cart-context';
 import { BUTTONS } from '../../styles/buttons';
 import Button from '../button/Button';
@@ -21,9 +22,11 @@ const Game = ({ game }) => {
 			<StyledGameImage src={image} alt={`${title} cover`} />
 			{isInCart && (
 				<StyledGameInCart>
-					<Button width={BUTTONS.M} primary={false}>
-						In Cart
-					</Button>
+					<Link to='/checkout'>
+						<Button width={BUTTONS.M} primary={false}>
+							In Cart
+						</Button>
+					</Link>
 					<img
 						src='/assets/images/trash.svg'
 						alt='trash icon'
